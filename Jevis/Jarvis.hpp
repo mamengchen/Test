@@ -145,7 +145,7 @@ public:
             std::cerr << "open file error" << std::endl;
             exit(1);
         }
-        std::string sep = ";";
+        std::string sep = ":";
         while(in.getline(buffer,sizeof(buffer)))
         {
             std::string str = buffer;
@@ -157,7 +157,7 @@ public:
             }
             std::string k = str.substr(0, pos);
             std::string v = str.substr(pos+sep.size());
-            k += ". ";
+            k += "。";
             command_set.insert(std::make_pair(k, v));
         }
         std::cout << "Load command etc ... done" << std::endl;
@@ -227,7 +227,7 @@ public:
 
     bool TTSAndPlay ( std::string message )
     {
-        std::string play = "cvlc --play-and-exit";
+        std::string play = "play ";
         play += PLAY_FILE;
         play += " >/dev/null 2>&1";
         sr.TTS(message);
@@ -272,4 +272,3 @@ private:
     InterRobot robot;
     std::unordered_map<std::string, std::string> command_set;
 };
-

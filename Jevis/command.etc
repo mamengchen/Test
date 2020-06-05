@@ -1,0 +1,8 @@
+查看当前目录:ls -a -l
+播放音乐:play BIGBANG-一天一天.mp3
+跑火车:sl
+查看当前路径:pwd
+查看内存:free
+显示配置文件:cat command.etc
+显示网络地址:hostname -I
+数据库备份:mysqldump -h127.0.0.1 -P3306 -uroot --all-databases > /home/mmc/C++/Jevis/mysql_$(date +%Y%m%d%H%M%S)_mmc.sql
